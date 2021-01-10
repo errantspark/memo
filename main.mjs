@@ -29,11 +29,11 @@ let parse = line => {
 let log_file_name = 'log'
 let log_exists = fs.existsSync(log_file_name)
 if (!log_exists) {
-  console.error('no log file present\ncreating dummy log file at ./log\nyou may edit this file as necessary')
+  console.error('no log file present\ncreating dummy log file at ./log\nyou may edit this file as necessary, see README.md for more details\n\n')
   fs.writeFileSync('./log', `${new Date()-1000*60*60*4}
 2h wasting time
 0:45 exercise
-1.3 video games`)
+1.2 video games`)
 }
 
 let loadLog = filename => {
